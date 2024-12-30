@@ -29,6 +29,22 @@ let submitted = false;
 
 let digits = 4;
 
+function parseParameters() {
+    window.location.search.substring(1).split('&').forEach(function (item) {
+        const pair = item.split('=');
+        const key = pair[0];
+        const value = pair[1];
+        switch(key.toLowerCase()) {
+            case 'digits':
+                digits = parseInt(value);
+                break;
+            default:
+                console.log(`Unknown parameter ${key}`);
+                break;
+        }
+    });
+}
+
 // Compute an FNV-1a on the sequence of directions to provide numeric codes.
 // This should provide numbers that are psudorandom (or at least almost
 // certainly unique and very different) but consistent for any entered sequence.
@@ -96,6 +112,8 @@ function reset() {
 // Set up connections to framework DOM established with html file.
 // This needs to be called after the page is loaded.
 function initialize() {
+    parseParameters();
+
     document.getElementById('button-up').appendChild(arrowUp());
     document.getElementById('button-left').appendChild(arrowLeft());
     document.getElementById('button-right').appendChild(arrowRight());
