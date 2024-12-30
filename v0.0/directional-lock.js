@@ -27,6 +27,8 @@ function arrowDown() {
 
 let submitted = false;
 
+let digits = 4;
+
 // Compute an FNV-1a on the sequence of directions to provide numeric codes.
 // This should provide numbers that are psudorandom (or at least almost
 // certainly unique and very different) but consistent for any entered sequence.
@@ -72,8 +74,8 @@ function addDirection(direction) {
 
 function submit() {
     const codeElement = document.getElementById('code');
-    code = code % 10000;
-    codeElement.textContent = code.toString().padStart(4, '0');
+    code = code % (10 ** digits);
+    codeElement.textContent = code.toString().padStart(digits, '0');
 
     submitted = true;
 }
