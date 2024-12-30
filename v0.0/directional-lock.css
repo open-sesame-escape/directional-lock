@@ -19,39 +19,43 @@ body {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 60px;
     border: none;
     border-radius: 8px;
+    padding: 10px;
     background-color: #007BFF;
     color: white;
-    font-size: 18px;
+    font-size: 24px;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.button:active {
-    background-color: #0056b3;
-}
 .button:hover {
     background-color: #0090FF;
+}
+.button:active {
+    background-color: #0056b3;
 }
 .button svg {
     width: 48px;
     height: 48px;
 }
-.up {
+.arrow {
+    width: 60px;
+    height: 60px;
+    padding: 0px;
+}
+#button-up {
     grid-row: 1;
     grid-column: 2;
 }
-.left {
+#button-left {
     grid-row: 2;
     grid-column: 1;
 }
-.right {
+#button-right {
     grid-row: 2;
     grid-column: 3;
 }
-.down {
+#button-down {
     grid-row: 3;
     grid-column: 2;
 }
@@ -66,6 +70,20 @@ body {
     white-space: pre-wrap;
 }
 
+#submit-reset-container {
+    display: grid;
+    grid-template-rows: 50px;
+    grid-template-columns: repeat(2, 100px);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#log {
+    display: flex;
+    flex-direction: row;
+}
+
 @media (orientation: landscape) {
     .container {
         flex-direction: row;
@@ -75,4 +93,19 @@ body {
         margin-left: 20px;
         margin-top: 0;
     }
+}
+
+.icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    margin: 2px;
+    background-color: #00007F;
+    color: white;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

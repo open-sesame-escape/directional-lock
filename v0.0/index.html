@@ -10,18 +10,22 @@
 <body>
     <div class="container">
         <div class="button-container">
-            <button id="button-up" class="button up" onclick="addDirection('Up')">
+            <button id="button-up" class="button arrow" onclick="addDirection('Up')">
             </button>
-            <button id="button-left" class="button left" onclick="addDirection('Left')">
+            <button id="button-left" class="button arrow" onclick="addDirection('Left')">
             </button>
-            <button id="button-right" class="button right" onclick="addDirection('Right')">
+            <button id="button-right" class="button arrow" onclick="addDirection('Right')">
             </button>
-            <button id="button-down" class="button down" onclick="addDirection('Down')">
+            <button id="button-down" class="button arrow" onclick="addDirection('Down')">
             </button>
         </div>
         <div id="results">
-            <div class="container">Directions pressed:</div>
+            <div id="submit-reset-container">
+                <button id="button-submit" class="button" onclick="submit()">Submit</button>
+                <button id="button-reset" class="button" onclick="reset()">Reset</button>
+            </div>
             <div id="log" class="container"></div>
+            <div id="code"></div>
         </div>
     </div>
 
