@@ -10,30 +10,27 @@
 <body>
     <div class="container">
         <div class="button-container">
-            <button id="button-up" class="button arrow" onclick="addDirection('Up')">
+            <button id="button-up" class="button arrow">
             </button>
-            <button id="button-left" class="button arrow" onclick="addDirection('Left')">
+            <button id="button-left" class="button arrow">
             </button>
-            <button id="button-right" class="button arrow" onclick="addDirection('Right')">
+            <button id="button-right" class="button arrow">
             </button>
-            <button id="button-down" class="button arrow" onclick="addDirection('Down')">
+            <button id="button-down" class="button arrow" >
             </button>
         </div>
         <div id="results">
             <div id="log" class="container"></div>
             <div id="submit-reset-container">
-                <button id="button-submit" class="button" onclick="submit()">Submit</button>
-                <button id="button-reset" class="button" onclick="reset()">Reset</button>
+                <button id="button-submit" class="button">Submit</button>
+                <button id="button-reset" class="button">Reset</button>
             </div>
             <div id="code"> </div>
         </div>
     </div>
 
     <script>
-        document.getElementById('button-up').appendChild(arrowUp());
-        document.getElementById('button-left').appendChild(arrowLeft());
-        document.getElementById('button-right').appendChild(arrowRight());
-        document.getElementById('button-down').appendChild(arrowDown());
+        initialize();
     </script>
 </body>
 </html>

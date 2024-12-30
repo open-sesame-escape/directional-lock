@@ -90,3 +90,28 @@ function reset() {
 
     submitted = false;
 }
+
+// Set up connections to framework DOM established with html file.
+// This needs to be called after the page is loaded.
+function initialize() {
+    document.getElementById('button-up').appendChild(arrowUp());
+    document.getElementById('button-left').appendChild(arrowLeft());
+    document.getElementById('button-right').appendChild(arrowRight());
+    document.getElementById('button-down').appendChild(arrowDown());
+
+    document.getElementById('button-up').onclick = () => {
+        addDirection('Up');
+    }
+    document.getElementById('button-left').onclick = () => {
+        addDirection('Left');
+    }
+    document.getElementById('button-right').onclick = () => {
+        addDirection('Right');
+    }
+    document.getElementById('button-down').onclick = () => {
+        addDirection('Down');
+    }
+
+    document.getElementById('button-submit').onclick = submit;
+    document.getElementById('button-reset').onclick = reset;
+}
