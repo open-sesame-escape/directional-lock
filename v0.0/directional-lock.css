@@ -32,6 +32,9 @@ body {
 .button:active {
     background-color: #0056b3;
 }
+.button:hover {
+    background-color: #0090FF;
+}
 .button svg {
     width: 48px;
     height: 48px;
