@@ -25,6 +25,8 @@ function arrowDown() {
     return arrowSVG('M12 22 L20 10 H14 V2 H10 V10 H4 Z')
 }
 
+let submitted = false;
+
 // Compute an FNV-1a on the sequence of directions to provide numeric codes.
 // This should provide numbers that are psudorandom (or at least almost
 // certainly unique and very different) but consistent for any entered sequence.
@@ -39,6 +41,10 @@ function addToCodeHash(input) {
 }
 
 function addDirection(direction) {
+    if (submitted) {
+        reset();
+    }
+
     addToCodeHash(direction);
 
     const log = document.getElementById('log');
@@ -68,15 +74,19 @@ function submit() {
     const codeElement = document.getElementById('code');
     code = code % 10000;
     codeElement.textContent = code.toString().padStart(4, '0');
+
+    submitted = true;
 }
 
 function reset() {
     code = FNV_OFFSET_BASIS;
-    document.getElementById('code').textContent = '';
+    document.getElementById('code').textContent = ' ';
 
     // Remove all elements from the log.
     const log = document.getElementById('log');
     while (log.firstChild) {
         log.removeChild(log.lastChild);
     }
+
+    submitted = false;
 }
