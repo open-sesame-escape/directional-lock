@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directional Lock</title>
+    <link rel="stylesheet" href="directional-lock.css">
+    <script type="text/javascript" src="directional-lock.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="button-container">
+            <button id="button-up" class="button up" onclick="addDirection('Up')">
+            </button>
+            <button id="button-left" class="button left" onclick="addDirection('Left')">
+            </button>
+            <button id="button-right" class="button right" onclick="addDirection('Right')">
+            </button>
+            <button id="button-down" class="button down" onclick="addDirection('Down')">
+            </button>
+        </div>
+        <div id="results">
+            <div class="container">Directions pressed:</div>
+            <div id="log" class="container"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('button-up').appendChild(arrowUp());
+        document.getElementById('button-left').appendChild(arrowLeft());
+        document.getElementById('button-right').appendChild(arrowRight());
+        document.getElementById('button-down').appendChild(arrowDown());
+    </script>
+</body>
+</html>
