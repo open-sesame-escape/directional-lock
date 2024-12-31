@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directional Lock Builder</title>
+    <link rel="stylesheet" href="form.css">
+    <script type="text/javascript" src="form.js"></script>
+</head>
+<body>
+    <div class="main-document">
+        <h1>Directional Lock Builder</h1>
+        <p>
+            This form provides an interactive page that converts a sequence of directions to a numerical code.
+            The intention of this page is to replace the use of directional padlocks, which have been discontinued by Masterlock, in DIY escape rooms.
+            Players can input the directions in this form, and based on the sequence, the form will provide a code that the players can insert into a more traditional padlock.
+        </p>
+
+        <h2>Link to Directional Lock Page:</h2>
+        <div id="link-container">
+            <div class="link-box">
+                <a id="link" href="error" target="_blank">ERROR</a>
+            </div>
+            <button id="copy-link-button" class="button">Copy Link</button>
+            <div id="copy-indicator" class="copy-indicator">Copied!</div>
+        </div>
+
+        <h2>Options:</h2>
+        <label for="digits-input">Number of code digits:</label>
+        <input id="digits-input" type="number" step="1" min="2" max="10"/>
+        <br/>
+        <label for="submit-input">Submit button:</label>
+        <input id="submit-input" type="text" size="10"/>
+        <br/>
+        <label for="reset-input">Reset button:</label>
+        <input id="reset-input" type="text" size="10"/>
+    </div>
+
+    <script>
+        initialize();
+    </script>
+</body>
