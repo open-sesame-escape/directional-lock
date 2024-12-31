@@ -38,6 +38,12 @@ function parseParameters() {
             case 'digits':
                 digits = parseInt(value);
                 break;
+            case 'submit':
+                document.getElementById('button-submit').textContent = value;
+                break;
+            case 'reset':
+                document.getElementById('button-reset').textContent = value;
+                break;
             default:
                 console.log(`Unknown parameter ${key}`);
                 break;
