@@ -27,14 +27,36 @@
         </div>
 
         <h2>Options:</h2>
-        <label for="digits-input">Number of code digits:</label>
-        <input id="digits-input" type="number" step="1" min="2" max="10"/>
-        <br/>
-        <label for="submit-input">Submit button:</label>
-        <input id="submit-input" type="text" size="10"/>
-        <br/>
-        <label for="reset-input">Reset button:</label>
-        <input id="reset-input" type="text" size="10"/>
+        <div class="form-group">
+            <label for="digits-input">Number of code digits:</label>
+            <input id="digits-input" type="number" step="1" min="2" max="10"/>
+            <span class="info-icon">i
+                <span class="tooltip-text">
+                    The sequence of directions will be converted into a number that can entered into a traditional number lock.
+                    This option specifies how many digits the generated code will have.
+                </span>
+            </span>
+        </div>
+        <div class="form-group">
+            <label for="submit-input">Submit button:</label>
+            <input id="submit-input" type="text" size="10"/>
+            <span class="info-icon">i
+                <span class="tooltip-text">
+                    The text to display in the submit button.
+                    This can be changed to a different language or to better match the theme of the room.
+                </span>
+            </span>
+        </div>
+        <div class="form-group">
+            <label for="reset-input">Reset button:</label>
+            <input id="reset-input" type="text" size="10"/>
+            <span class="info-icon">i
+                <span class="tooltip-text">
+                    The text to display in the reset button.
+                    This can be changed to a different language or to better match the theme of the room.
+                </span>
+            </span>
+        </div>
     </div>
 
     <script>

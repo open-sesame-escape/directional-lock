@@ -31,3 +31,48 @@ body {
 .copy-indicator.show {
     opacity: 1;
 }
+
+.form-group {
+    margin-bottom: 10px;
+    position: relative;
+}
+.info-icon {
+    display: inline-block;
+    margin-left: 5px;
+    width: 18px;
+    height: 18px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+.tooltip-text {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: left;
+    padding: 8px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+    width: 400px;
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words break */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    font-weight: normal;
+}
+.info-icon:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
