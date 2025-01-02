@@ -33,7 +33,7 @@ function parseParameters() {
     window.location.search.substring(1).split('&').forEach(function (item) {
         const pair = item.split('=');
         const key = pair[0];
-        const value = pair[1];
+        const value = decodeURIComponent(pair[1]);
         switch(key.toLowerCase()) {
             case 'digits':
                 digits = parseInt(value);

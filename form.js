@@ -13,7 +13,7 @@ function updateURL() {
     function addParameter(paramName, defaultValue) {
         const value = document.getElementById(paramName + '-input').value;
         if (value != defaultValue) {
-            parameters.push(paramName + '=' + value);
+            parameters.push(paramName + '=' + encodeURIComponent(value));
         }
     }
 
